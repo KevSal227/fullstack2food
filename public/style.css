@@ -1,0 +1,76 @@
+body {
+    padding-top: 80px;
+    word-wrap: break-word;
+    background-color: #fdf3e7;
+}
+
+/* lets the food go all the way across the page instead of half */
+.col-sm-6:has(.messages) {
+    width: 100%;
+}
+
+/* the food grid, fills up the row then starts a new one so you scroll down */
+.messages {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 10px 5px 30px;
+    margin: 0;
+}
+
+/* each food is a card */
+.message {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    background-color: #222;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 12px;
+    transition: transform 0.2s;
+}
+
+/* card gets a little bigger when you hover it */
+.message:hover {
+    transform: scale(1.05);
+}
+
+/* the pic goes on top of the card */
+.message img {
+    order: -1;
+    flex-basis: 100%;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+/* the food name */
+.message > span:first-child {
+    flex-basis: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 4px 12px 0;
+}
+
+/* first vote count */
+.message > img + span {
+    margin-left: 12px;
+}
+
+/* trash goes all the way to the right */
+.message > span:last-child {
+    margin-left: auto;
+    margin-right: 12px;
+}
+
+/* the icons */
+.message .fa {
+    cursor: pointer;
+}
+
+.message .fa:hover {
+    color: #e50914;
+}

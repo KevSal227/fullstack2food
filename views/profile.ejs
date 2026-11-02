@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <title>21 Savage Fan Site</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1>Does it taste as good as it looks?</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION
+        <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+
+                <% if (user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p>
+
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+
+            </div>
+        </div> -->
+        <div class="col-sm-6">
+          <h3>Food</h3>
+          <ul class="messages">
+          <% for(var i=0; i<messages.length; i++) {%>
+            <li class="message">
+              <span><%= messages[i].name %></span>
+<!-- i got this from the code i already had -->
+              <img src="<%= messages[i].pic %>" alt="<%= messages[i].name %>" width="150">
+
+              <!-- this was pulled from the other code i had  -->
+              <span><%= messages[i].thumbUp || 0 %></span>
+              <span><i class="fa fa-thumbs-up" data-id="<%= messages[i]._id %>" aria-hidden="true"></i></span>
+              <span><%= messages[i].thumbDown || 0 %></span>
+              <span><i class="fa fa-thumbs-down" data-id="<%= messages[i]._id %>" aria-hidden="true"></i></span>
+              <!-- click trash to delete -->
+              <span><i class="fa fa-trash" data-id="<%= messages[i]._id %>" aria-hidden="true"></i></span>
+            </li>
+          <% } %>
+          </ul>
+
+          <h2>Add a food</h2>
+        <% if (user.local.email) { %>
+          <form action="/messages" method="POST">
+            <input type="text" placeholder="what is the food" name="name">
+            <input type="text" placeholder="Add Img Address Here" name="pic">
+            <button type="submit">Submit</button>
+          </form>
+        <% } %>
+        </div>
+
+    </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
