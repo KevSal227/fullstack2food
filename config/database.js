@@ -1,8 +1,7 @@
 module.exports = {
-    'dbName': 'stackTwo',
-    'url': 'mongodb+srv://kevin:digimon@cluster0.mmovhqi.mongodb.net/stackTwo?retryWrites=true&w=majority'
+    dbName: 'stackTwo',
+    url: process.env.MONGODB_URI
 };
-
 
 // // config/database.js
 // module.exports = {
