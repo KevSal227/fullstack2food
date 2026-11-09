@@ -1,5 +1,11 @@
 # 🍽️ Does It Taste as Good as It Looks?
 
+<img width="825" height="364" alt="fullstack2 SS" src="https://github.com/user-attachments/assets/0949221e-eac3-496a-aeba-ae970ed166cb" />
+
+<img width="1073" height="615" alt="fullstack2 SS2" src="https://github.com/user-attachments/assets/d3cb8a61-0a25-436e-9d51-18108cb1cec9" />
+
+
+
 ### Full-Stack Food Sharing & Voting Application
 
 ## About the Project
