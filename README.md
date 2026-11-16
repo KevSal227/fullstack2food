@@ -1,4 +1,4 @@
-# 🍽️ Does It Taste as Good as It Looks?
+#  Does It Taste as Good as It Looks?
 
 <img width="825" height="364" alt="fullstack2 SS" src="https://github.com/user-attachments/assets/0949221e-eac3-496a-aeba-ae970ed166cb" />
 
